@@ -1,0 +1,52 @@
+{
+    "brands": [
+      { "name": "Nike", "country": "USA", "founded": 1964 },
+      { "name": "Adidas", "country": "Germany", "founded": 1949 }
+    ],
+    "categories": [
+      { "name": "Áo Thun", "parent": null },
+      { "name": "Quần Jean", "parent": null }
+    ],
+    "colors": [
+      { "name": "Đỏ", "hexCode": "#FF0000", "rgb": { "r": 255, "g": 0, "b": 0 } },
+      { "name": "Xanh Dương", "hexCode": "#0000FF", "rgb": { "r": 0, "g": 0, "b": 255 } }
+    ],
+    "sizes": [
+      { "name": "S", "description": "Small size" },
+      { "name": "M", "description": "Medium size" },
+      { "name": "L", "description": "Large size" }
+    ],
+    "styles": [
+      { "name": "Casual", "description": "Phong cách thường ngày" },
+      { "name": "Formal", "description": "Trang trọng" }
+    ],
+    "necklines": [
+      { "name": "V-neck", "description": "Cổ chữ V" },
+      { "name": "Round Neck", "description": "Cổ tròn" }
+    ],
+    "sleeveLengths": [
+      { "name": "Short Sleeve", "description": "Tay ngắn" },
+      { "name": "Long Sleeve", "description": "Tay dài" }
+    ],
+    "shoulders": [
+      { "name": "Drop Shoulder", "description": "Vai xuôi" },
+      { "name": "Regular Shoulder", "description": "Vai chuẩn" }
+    ],
+    "occasions": [
+      { "name": "Party", "description": "Thích hợp đi tiệc" },
+      { "name": "Work", "description": "Thích hợp đi làm" }
+    ],
+    "seasonCodes": [
+      { "name": "Summer 2025", "description": "Trang phục mùa hè 2025" },
+      { "name": "Winter 2025", "description": "Trang phục mùa đông 2025" }
+    ],
+    "tags": [
+      { "name": "Hot Trend", "description": "Sản phẩm đang thịnh hành" },
+      { "name": "Sale", "description": "Sản phẩm giảm giá" }
+    ],
+    "types": [
+      { "name": "Áo", "description": "Các loại áo" },
+      { "name": "Quần", "description": "Các loại quần" }
+    ]
+}
+  

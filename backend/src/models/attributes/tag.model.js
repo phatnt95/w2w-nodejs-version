@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
-export const TagSchema = new Schema({
+const TagSchema = new Schema({
   name: {
     type: String,
     required: 'Enter a tag name',
@@ -10,4 +10,4 @@ export const TagSchema = new Schema({
   }
 });
 
-// export default mongoose.model('Tag', TagSchema);
+export default mongoose.model('Tag', TagSchema);

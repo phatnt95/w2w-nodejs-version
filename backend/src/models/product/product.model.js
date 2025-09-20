@@ -17,7 +17,7 @@ const ProductSchema = new Schema({
     shoulder: { type: Schema.Types.ObjectId, ref: 'Shoulder', required: false },
     occasion: { type: Schema.Types.ObjectId, ref: 'Occasion', required: false },
     seasonCode: { type: Schema.Types.ObjectId, ref: 'SeasonCode', required: false },
-    tags: { type: Schema.Types.ObjectId, ref: 'Tag', required: false },
+    tag: { type: Schema.Types.ObjectId, ref: 'Tag', required: false },
     images: [{
         path: { type: String },   // ví dụ: "/uploads/product1.jpg"
         alt: { type: String },    // mô tả ảnh

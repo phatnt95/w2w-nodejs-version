@@ -1,4 +1,5 @@
 import React from "react";
+import navbarLogo from '../assets/logo.png'
 // import M from "materialize-css";
 
 const Navbar = () => {
@@ -9,7 +10,7 @@ const Navbar = () => {
                 <div className="nav-wrapper blue">
                     {/* Logo bên trái */}
                     <a href="/" className="brand-logo" style={{ marginLeft: "20px" }}>
-                        MyLogo
+                        MyLogo<img src={navbarLogo} className="logo" alt="Vite logo" />
                     </a>
 
                     {/* Menu giữa */}

@@ -9,8 +9,9 @@ const ProductList = () => {
     const itemsPerPage = 10;
 
     useEffect(() => {
+        console.log(import.meta.env.API_BASE_URL);
         // Giả sử gọi API -> setProducts
-        fetch("http://localhost:3000/products")
+        fetch("http://localhost:3002/products")
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
@@ -43,7 +44,8 @@ const ProductList = () => {
                     <div className="col s12 m6 l4" key={product._id}>
                         <div className="card">
                             <div className="card-image">
-                                <img src={product.image} alt={product.name} />
+                                {/* <img src={'http://localhost:3002/' + product.images[0]?.path} alt={product.name} /> */}
+                                <img src={`http://localhost:3002/${product.images[0]?.path}`} alt={product.name} />
                             </div>
                             <div className="card-content">
                                 <span className="card-title">{product.name}</span>

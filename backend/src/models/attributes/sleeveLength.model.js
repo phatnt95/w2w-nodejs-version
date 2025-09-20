@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
-export const SleeveLengthSchema = new Schema({
+const SleeveLengthSchema = new Schema({
     name: {
         type: String,
         required: 'Enter a sleeve length',
@@ -10,4 +10,4 @@ export const SleeveLengthSchema = new Schema({
     }
 });
 
-// export default mongoose.model('SleeveLength', SleeveLengthSchema);
+export default mongoose.model('SleeveLength', SleeveLengthSchema);

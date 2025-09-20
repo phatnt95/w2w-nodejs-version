@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
-export const ShoulderSchema = new Schema({
+const ShoulderSchema = new Schema({
   name: {
     type: String,
     required: 'Enter a shoulder name',
@@ -10,3 +10,5 @@ export const ShoulderSchema = new Schema({
   },
   description: String
 });
+
+export default mongoose.model('Shoulder', ShoulderSchema);

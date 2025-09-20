@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
-export const SeasonCodeSchema = new Schema({
+const SeasonCodeSchema = new Schema({
   name: {
     type: String,
     required: 'Enter a season code',
@@ -10,4 +10,4 @@ export const SeasonCodeSchema = new Schema({
   }
 });
 
-// export default mongoose.model('SeasonCode', SeasonCodeSchema);
+export default mongoose.model('SeasonCode', SeasonCodeSchema);

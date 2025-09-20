@@ -1,29 +1,16 @@
-import mongoose from 'mongoose';
-import { BrandSchema } from '../models/attributes/brandModel.js';
-import { CategorySchema } from '../models/attributes/categoryModel.js';
-import { ColorSchema } from '../models/attributes/colorModel.js';
-import { SizeSchema } from '../models/attributes/sizeModel.js';
-import { StyleSchema } from '../models/attributes/styleModel.js';
-import { NecklineSchema } from '../models/attributes/necklineModel.js';
-import { SleeveLengthSchema } from '../models/attributes/sleeveLengthModel.js';
-import { ShoulderSchema } from '../models/attributes/shoulderModel.js';
-import { OccasionSchema } from '../models/attributes/occasionModel.js';
-import { SeasonCodeSchema } from '../models/attributes/seasonCodeModel.js';
-import { TagSchema } from '../models/attributes/tagModel.js';
-import { TypeSchema } from '../models/attributes/typeModel.js';
-
-const Brand = mongoose.model('Brand', BrandSchema);
-const Category = mongoose.model('Category', CategorySchema);
-const Color = mongoose.model('Color', ColorSchema);
-const Size = mongoose.model('Size', SizeSchema);
-const Style = mongoose.model('Style', StyleSchema);
-const Neckline = mongoose.model('Neckline', NecklineSchema);
-const SleeveLength = mongoose.model('SleeveLength', SleeveLengthSchema);
-const Shoulder = mongoose.model('Shoulder', ShoulderSchema);
-const Occasion = mongoose.model('Occasion', OccasionSchema);
-const SeasonCode = mongoose.model('SeasonCode', SeasonCodeSchema);
-const Tag = mongoose.model('Tag', TagSchema);
-const Type = mongoose.model('Type', TypeSchema);
+// import mongoose from 'mongoose';
+import Brand from '../models/attributes/brand.model.js';
+import Category from '../models/attributes/category.model.js';
+import Color from '../models/attributes/color.model.js';
+import Size from '../models/attributes/size.model.js';
+import Style from '../models/attributes/style.model.js';
+import Neckline from '../models/attributes/neckline.model.js';
+import SleeveLength from '../models/attributes/sleeveLength.model.js';
+import Shoulder from '../models/attributes/shoulder.model.js';
+import Occasion from '../models/attributes/occasion.model.js';
+import SeasonCode from '../models/attributes/seasonCode.model.js';
+import Tag from '../models/attributes/tag.model.js';
+import Type from '../models/attributes/type.model.js';
 
 export const addNewBrand = (req, res) => {
     let newBrand = new Brand(req.body);
@@ -244,7 +231,7 @@ export const getTypes = (req, res) => {
 };
 
 export const getAllAttributes = async (req, res) => {
-    try{
+    try {
         const [
             brands,
             categories,
@@ -272,7 +259,7 @@ export const getAllAttributes = async (req, res) => {
             Tag.find({}),
             Type.find({})
         ]);
-      
+
         res.json({
             brands,
             categories,
@@ -287,7 +274,7 @@ export const getAllAttributes = async (req, res) => {
             tags,
             types
         });
-    } catch (err){
+    } catch (err) {
         res.status(500).send(err);
     }
 }

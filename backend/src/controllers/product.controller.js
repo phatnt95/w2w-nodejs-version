@@ -21,7 +21,17 @@ export const getProductById = async (req, res, next) => {
 
 export const addProduct = async (req, res, next) => {
     try {
-        const product = await productService.create(req.body);
+        // Map files vào images[]
+        const images = req.files.map((file, index) => ({
+            path: `public/uploads/${file.filename}`,
+            alt: req.body.alt ? req.body.alt[index] : "", // nếu client gửi alt[]
+            isMain: index === 0 // đánh dấu ảnh đầu tiên làm main
+        }));
+        console.log(images);
+        const reqBody = { ...req.body, images: images };
+        console.log(reqBody);
+
+        const product = await productService.create(reqBody);
         res.status(201).json(product);
     } catch (error) {
         next(error);

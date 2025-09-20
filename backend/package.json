@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "nodemon ./index.js --exec babel-node",
+        "run": "nodemon ./src/server.js --exec babel-node",
         "seed": "node seed.js"
     },
     "author": "Phat Nguyen",

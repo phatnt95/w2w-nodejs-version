@@ -1,17 +1,19 @@
-// import mongoose from "mongoose";
+import mongoose from "mongoose";
 
 
-// const connectDatabase = () => {
-//     try {
-//         mongoose.connect(process.env.MONGO_URI, {
-//             dbName: process.env.DB_NAME || "mydb",
-//         });
-//         console.log("✅ MongoDB connected");
-//     } catch (err) {
-//         console.error("❌ MongoDB connection failed:", err.message);
-//         process.exit(1); // stop app if connect failed.
-//     }
-// }
+const connectDatabase = async () => {
+    try {
+        mongoose.connect(process.env.MONGO_URI, {
+            dbName: process.env.MONGO_DBNAME || "mydb",
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
+        console.log("✅ MongoDB connected\n");
+    } catch (err) {
+        console.error("❌ MongoDB connection failed:", err.message + '\n');
+        process.exit(1); // stop app if connect failed.
+    }
+}
 
 
-// export default connectDatabase;
+export default connectDatabase;

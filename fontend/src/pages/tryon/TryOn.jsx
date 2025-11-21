@@ -25,56 +25,65 @@ const TryOn = () => {
     ];
 
     return (
-        <div style={{ display: "flex", height: "100vh" }}>
-            {/* Vùng hiển thị avatar 3D */}
-            <div style={{ flex: 1, background: "#f5f5f5" }}>
-                <Canvas camera={{ position: [0, 1.5, 3] }}>
-                    <ambientLight intensity={0.6} />
-                    <directionalLight position={[2, 5, 2]} intensity={1} />
-                    <Avatar />
-                    <Outfit modelUrl={outfit?.modelUrl} />
-                    <OrbitControls />
-                </Canvas>
-            </div>
-
-            {/* Sidebar chọn trang phục */}
-            <div style={{ width: "250px", padding: 20, background: "#fff" }}>
-                <h3>Chọn trang phục</h3>
-                {products.map((p) => (
-                    <div key={p.id} style={{ marginBottom: 10 }}>
-                        <button
-                            style={{
-                                width: "100%",
-                                padding: "10px",
-                                cursor: "pointer",
-                                background: outfit?.id === p.id ? "#1976d2" : "#eee",
-                                color: outfit?.id === p.id ? "#fff" : "#000",
-                                border: "none",
-                                borderRadius: "4px",
-                            }}
-                            onClick={() => setOutfit(p)}
-                        >
-                            {p.name}
-                        </button>
-                    </div>
-                ))}
-                <button
-                    style={{
-                        width: "100%",
-                        padding: "10px",
-                        marginTop: "20px",
-                        background: "#f44336",
-                        color: "#fff",
-                        border: "none",
-                        borderRadius: "4px",
-                        cursor: "pointer",
-                    }}
-                    onClick={() => setOutfit(null)}
-                >
-                    Reset outfit
-                </button>
-            </div>
+        <div style={{ flex: 1, background: "#f5f5f5" }}>
+            <Canvas camera={{ position: [0, 1.5, 3] }}>
+                <ambientLight intensity={0.6} />
+                <directionalLight position={[2, 5, 2]} intensity={1} />
+                <Avatar />
+                <Outfit modelUrl={outfit?.modelUrl} />
+                <OrbitControls />
+            </Canvas>
         </div>
+        // <div style={{ display: "flex", height: "100vh" }}>
+
+        //     <div style={{ flex: 1, background: "#f5f5f5" }}>
+        //         <Canvas camera={{ position: [0, 1.5, 3] }}>
+        //             <ambientLight intensity={0.6} />
+        //             <directionalLight position={[2, 5, 2]} intensity={1} />
+        //             <Avatar />
+        //             <Outfit modelUrl={outfit?.modelUrl} />
+        //             <OrbitControls />
+        //         </Canvas>
+        //     </div>
+
+
+        //     <div style={{ width: "250px", padding: 20, background: "#fff" }}>
+        //         <h3>Chọn trang phục</h3>
+        //         {products.map((p) => (
+        //             <div key={p.id} style={{ marginBottom: 10 }}>
+        //                 <button
+        //                     style={{
+        //                         width: "100%",
+        //                         padding: "10px",
+        //                         cursor: "pointer",
+        //                         background: outfit?.id === p.id ? "#1976d2" : "#eee",
+        //                         color: outfit?.id === p.id ? "#fff" : "#000",
+        //                         border: "none",
+        //                         borderRadius: "4px",
+        //                     }}
+        //                     onClick={() => setOutfit(p)}
+        //                 >
+        //                     {p.name}
+        //                 </button>
+        //             </div>
+        //         ))}
+        //         <button
+        //             style={{
+        //                 width: "100%",
+        //                 padding: "10px",
+        //                 marginTop: "20px",
+        //                 background: "#f44336",
+        //                 color: "#fff",
+        //                 border: "none",
+        //                 borderRadius: "4px",
+        //                 cursor: "pointer",
+        //             }}
+        //             onClick={() => setOutfit(null)}
+        //         >
+        //             Reset outfit
+        //         </button>
+        //     </div>
+        // </div>
     );
 }
 

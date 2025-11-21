@@ -11,7 +11,10 @@ import ProductCreate from './pages/product/ProductCreate.jsx'
 import ProductSingle from './pages/product/ProductSingle.jsx'
 import ProductList from './pages/product/ProductList.jsx'
 import TryOn from './pages/tryon/TryOn.jsx'
-
+import StockUp from './pages/stockup/StockUp.jsx';
+import LocationSetup from './pages/setup/LocationDetail.jsx';
+import LocationList from './pages/setup/LocationList.jsx';
+import Inventory from './pages/setup/Inventory.jsx';
 function App() {
 
 	return (
@@ -25,6 +28,10 @@ function App() {
 					<Route path="/try-on" element={<TryOn />} />
 					<Route path="/products" element={<ProductList />} />
 					<Route path="/product/:id" element={<ProductSingle />} />
+					<Route path="/stock-up" element={<StockUp />} />
+					{/* setup page */}
+					<Route path="/setup/locations" element={<LocationList />} />
+					<Route path="/setup/inventory" element={<Inventory />} />
 					{/* Protected routes */}
 					<Route
 						path="/dashboard"

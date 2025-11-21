@@ -1,0 +1,106 @@
+[
+    {
+        "code": "HOME",
+        "name": "My Home",
+        "storages": [
+            {
+                "name": "Master Bedroom",
+                "type": "wardrobe",
+                "cabinets": [
+                    {
+                        "name": "Main Wardrobe",
+                        "material": "wood",
+                        "bins": [
+                            {
+                                "name": "Top Shelf",
+                                "type": "shelf"
+                            },
+                            {
+                                "name": "Drawer 1",
+                                "type": "drawer"
+                            },
+                            {
+                                "name": "Drawer 2",
+                                "type": "drawer"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bedside Table",
+                        "material": "wood",
+                        "bins": [
+                            {
+                                "name": "Top Drawer",
+                                "type": "drawer"
+                            },
+                            {
+                                "name": "Bottom Drawer",
+                                "type": "drawer"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Kitchen",
+                "type": "warehouse",
+                "cabinets": [
+                    {
+                        "name": "Pantry",
+                        "material": "wood",
+                        "bins": [
+                            {
+                                "name": "Shelf 1",
+                                "type": "shelf"
+                            },
+                            {
+                                "name": "Shelf 2",
+                                "type": "shelf"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "code": "WH01",
+        "name": "Main Warehouse",
+        "storages": [
+            {
+                "name": "Zone A",
+                "type": "warehouse",
+                "cabinets": [
+                    {
+                        "name": "Rack 1",
+                        "material": "metal",
+                        "bins": [
+                            {
+                                "name": "Bin A1",
+                                "type": "box"
+                            },
+                            {
+                                "name": "Bin A2",
+                                "type": "box"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Rack 2",
+                        "material": "metal",
+                        "bins": [
+                            {
+                                "name": "Bin B1",
+                                "type": "box"
+                            },
+                            {
+                                "name": "Bin B2",
+                                "type": "box"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,7 +1,8 @@
 import * as productService from '../services/product.service.js';
 export const getProducts = async (req, res, next) => {
     try {
-        const products = await productService.findAll();
+        const queryParams = req.query;
+        const products = await productService.findAll(queryParams);
         res.json(products);
     } catch (error) {
         next(error);

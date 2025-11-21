@@ -5,12 +5,15 @@ import navbarLogo from '../assets/logo.png'
 const Navbar = () => {
 
     return (
-        <>
+        <div>
             <nav>
                 <div className="nav-wrapper blue">
                     {/* Logo bên trái */}
-                    <a href="/" className="brand-logo" style={{ marginLeft: "20px" }}>
-                        MyLogo<img src={navbarLogo} className="logo" alt="Vite logo" />
+                    <a href="/" className="brand-logo" >
+                        <img src={navbarLogo} alt="Vite logo" style={{
+                            height: "50px",    // keep it smaller than navbar
+                            marginTop: "7px"   // vertical align tweak
+                        }} />
                     </a>
 
                     {/* Menu giữa */}
@@ -24,16 +27,8 @@ const Navbar = () => {
                     {/* Avatar bên phải */}
                     <ul className="right hide-on-med-and-down" style={{ marginRight: "20px" }}>
                         <li>
-                            <a
-                                className="dropdown-trigger"
-                                href="#!"
-                                data-target="user-dropdown"
-                            >
-                                <img
-                                    src="https://i.pravatar.cc/40"
-                                    alt="avatar"
-                                    className="circle responsive-img"
-                                    style={{ width: "40px", height: "40px", marginTop: "10px" }}
+                            <a className="dropdown-trigger" href="#!" data-target="user-dropdown" >
+                                <img src="https://i.pravatar.cc/40" alt="avatar" className="circle responsive-img" style={{ width: "40px", height: "40px", marginTop: "10px" }}
                                 />
                             </a>
                         </li>
@@ -48,7 +43,7 @@ const Navbar = () => {
                 <li className="divider"></li>
                 <li><a href="/logout">Logout</a></li>
             </ul>
-        </>
+        </div>
     );
 }
 

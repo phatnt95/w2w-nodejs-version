@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import api from "../../services/api.service.js"
 import axios from "axios";
 
 const ProductSingle = () => {
@@ -10,7 +11,8 @@ const ProductSingle = () => {
 
     // Load product khi mount
     useEffect(() => {
-        axios.get(`http://localhost:3000/product/${id}`).then((res) => {
+        api.get(`/product/${id}`).then((res) => {
+            console.log(res);
             setProduct(res.data);
             setFormData(res.data);
         });

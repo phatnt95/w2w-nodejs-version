@@ -15,10 +15,11 @@ import StockUp from './pages/stockup/StockUp.jsx';
 import LocationSetup from './pages/setup/LocationDetail.jsx';
 import LocationList from './pages/setup/LocationList.jsx';
 import Inventory from './pages/setup/Inventory.jsx';
+import { MantineProvider } from '@mantine/core';
 function App() {
 
 	return (
-		<>
+		<MantineProvider>
 			<Router>
 				<Navbar />
 				<Routes>
@@ -48,7 +49,7 @@ function App() {
 				<Footer />
 			</Router>
 
-		</>
+		</MantineProvider>
 
 	)
 }

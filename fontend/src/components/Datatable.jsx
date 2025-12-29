@@ -1,41 +1,35 @@
-import { FaEye, FaMagic } from "react-icons/fa";
+import { Table } from "@mantine/core";
+const elements = [
+    { position: 6, mass: 12.011, symbol: 'C', name: 'Carbon' },
+    { position: 7, mass: 14.007, symbol: 'N', name: 'Nitrogen' },
+    { position: 39, mass: 88.906, symbol: 'Y', name: 'Yttrium' },
+    { position: 56, mass: 137.33, symbol: 'Ba', name: 'Barium' },
+    { position: 58, mass: 140.12, symbol: 'Ce', name: 'Cerium' },
+];
+
 const Datatable = ({ title, columns, data }) => {
 
-    return (
-        <div>
-            <div className="container" style={{ marginTop: '40px' }}>
-                <h4 className="teal-text text-lighten-2">{title}</h4>
-            </div>
-            {/* <Table hoverable striped className="responsive-table"> */}
-            <thead>
-                <tr>
-                    {columns.map((column) => (
-                        <th key={column.accessor}>{column.header}</th>
-                    ))}
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                {data.map((item) => (
-                    <tr key={item._id}>
-                        {columns.map((column) => (
-                            <td key={column.accessor}>{item[column.accessor]}</td>
-                        ))}
-                        <td>
-                            <button className="btn-flat" onClick={() => onViewDetail(product)} title="View Detail">
-                                <i className="material-icons">visibility</i>
-                            </button>
-                            <button className="btn-flat" onClick={() => onTryOn(product)} title="Try On">
-                                {/* <i className="material-icons">visibility</i> */}
-                                <i className="material-icons">touch_app</i>
-                            </button>d  vc
-                        </td>
-                    </tr>
-                ))}
-            </tbody>
-            {/* </Table> */}
+    const rows = elements.map((element) => (
+        <Table.Tr key={element.name}>
+            <Table.Td>{element.position}</Table.Td>
+            <Table.Td>{element.name}</Table.Td>
+            <Table.Td>{element.symbol}</Table.Td>
+            <Table.Td>{element.mass}</Table.Td>
+        </Table.Tr>
+    ));
 
-        </div>
+    return (
+        <Table striped highlightOnHover>
+            <Table.Thead>
+                <Table.Tr>
+                    <Table.Th>Position</Table.Th>
+                    <Table.Th>Name</Table.Th>
+                    <Table.Th>Symbol</Table.Th>
+                    <Table.Th>Mass</Table.Th>
+                </Table.Tr>
+            </Table.Thead>
+            <Table.Tbody>{rows}</Table.Tbody>
+        </Table>
     );
 };
 
